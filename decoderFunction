@@ -1,0 +1,14 @@
+def decoder(password):  # Function to decode the encoded password
+    my_str = ''
+    for i in range(len(password)):
+        #for loop to iterate length of input
+        curr_num = int(password[i])
+        curr_num -= 3
+        my_str +=  (str(curr_num))
+        #adds decoded numbers to a string
+    password = my_str
+    #reassigns password to decoded values
+    return password
+    #returns decoded string
+
+# print(decoder('45678888'))

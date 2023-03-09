@@ -1,5 +1,5 @@
 #Nicolas Ibanez Delgado, Joe Lee
-from decode import *
+from decoderFunction import *
 loop = True 
 
 def encode(password):  # Function to encode the password
@@ -22,7 +22,7 @@ while loop == True:  # While loop to print out the menu and ask for user input
         print( "Your password has been encoded and stored!")
         continue
     elif menu == 2:  # Decodes password
-        print(decode("45678888"))
+        print(decoder(encode(password)))
         #print (f'The encoded password is {encode(password)}, and the original password is {password}.')
         continue
     elif menu == 3:  # Ends program
