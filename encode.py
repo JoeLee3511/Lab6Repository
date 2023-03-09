@@ -1,8 +1,8 @@
-#Nicolas Ibanez Delgado
+#Nicolas Ibanez Delgado, Joe Lee
 from decode import *
 loop = True 
 
-def encode(password):
+def encode(password):  # Function to encode the password
     my_str = ''
     for i in range(len(password)):
         curr_num = int(password[i])
@@ -13,17 +13,17 @@ def encode(password):
 
 
 
-while loop == True:
+while loop == True:  # While loop to print out the menu and ask for user input
     print('Menu\n------------- \n1. Encode\n2. Decode\n3. Quit')
     menu = int(input("Please enter an option: "))
-    if menu == 1:
+    if menu == 1:  # Encodes password
         password = input('Please enter your password to encode: ')
         encode(password)
         print( "Your password has been encoded and stored!")
         continue
-    elif menu == 2: 
+    elif menu == 2:  # Decodes password
         print(decode("45678888"))
         #print (f'The encoded password is {encode(password)}, and the original password is {password}.')
         continue
-    elif menu == 3:
+    elif menu == 3:  # Ends program
         break
