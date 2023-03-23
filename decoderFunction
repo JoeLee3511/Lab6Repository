@@ -1,23 +1,18 @@
 #Nicolas Ibanez Delgado
 #This is the decoder I made from my own file
 
-from decode import *
-loop = True 
-
-def encode(password):
+def decode(password):
     my_str = ''
-    #empty string
-
+    #empty strig
     for i in range(len(password)):
         #for loop that iterates the string
         curr_num = int(password[i])
-        #encodes character
-        curr_num += 3
-        if curr_num >= 10:
-            #if statement to correctly decode vaalues > 10
-            curr_num = curr_num - 10
+        curr_num -= 3
+        if curr_num < 0:
+            #if statment to avoid negatives
+            curr_num += 10
         my_str +=  (str(curr_num))
         #concatenates the string
     password = my_str
-    #returns the string
+    #returns the password
     return password
